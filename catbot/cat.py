@@ -12,7 +12,7 @@ init()
 print(Fore.GREEN + 'Start')
 
 
-token = '5047054429:AAEwvvjPJ5qyaPhmFgF4beMN7neBF8S9Sp4'
+token = '' # <--- token here
 
 
 bot = telebot.TeleBot(token)
@@ -97,20 +97,5 @@ def photo(message):
     f.close()
     bot.send_photo(ids, id_, caption=f'message from - @{message.from_user.username}')
 
-
-aid = '2123111736'
-aid1 = '1968765091'
-#vid = open('D:/Download/w.mp4', 'rb')
-#bot.send_video_note(aid1, vid)
-
-import keyboard as kb
-
-def input_to_you():
-    id_ = '2123111736'
-    a = Fore.CYAN + 'type text... '
-    message = input(Fore.CYAN + a)
-    bot.send_message(id_, message)
-
-#kb.add_hotkey('up', input_to_you)
 
 bot.polling(none_stop=True, interval=0)
